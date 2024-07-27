@@ -1,0 +1,19 @@
+/* Global rules declared here*/
+
+:root {
+  --button: #1d59f0;
+  --buttonMain: rgb(255, 111, 0);
+  --buttonSecondary: #15abe4;
+  --background: #050f28;
+  --body: #0b359f;
+  --screen: #041339;
+}
+
+html {
+  background-color: var(--background);
+  box-sizing: border-box;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
