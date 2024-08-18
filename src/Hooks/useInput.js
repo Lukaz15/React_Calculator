@@ -128,16 +128,31 @@ export const useInput = () => {
   }, [handleKeyPress]);
 
   useEffect(() => {
-    calculate();
-    if (inputValue.length > 12) {
-      let offSet = inputValue.length - 14;
-      inputRef.current.style.transform = `translateX(-${
-        (inputRef.current.clientWidth / inputValue.length) * offSet
-      }px)`;
-    } else {
-      inputRef.current.style.transform = `translateX(0)`;
-    }
-  }, [inputValue, calculate, inputRef, setInputValue]);
+    const updateLayout = () => {
+      calculate();
+      if (inputValue === "") {
+        setResult("");
+      }
+      const charSize = inputRef.current.clientWidth / inputValue.length;
+      const maxInputLen = Math.round(
+        inputRef.current.parentElement.parentElement.parentElement.clientWidth /
+          charSize
+      );
+      if (inputValue.length > maxInputLen) {
+        const offSet =
+          inputRef.current.clientWidth - charSize * maxInputLen - charSize / 10;
+        inputRef.current.style.transform = `translateX(-${offSet}px)`;
+      } else {
+        inputRef.current.style.transform = `translateX(0)`;
+      }
+    };
+    updateLayout();
+    document.addEventListener("resize", updateLayout());
+    return () => {
+      document.removeEventListener("resize", updateLayout());
+    };
+  }, [inputValue, calculate, inputRef, setInputValue, setResult]);
+
   return {
     inputValue,
     setInputValue,

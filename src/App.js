@@ -8,7 +8,7 @@ were left out. It should be functional regardless. */
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div id="App" className={styles.App}>
       <CalculatorProvider>
         <Calculator />
       </CalculatorProvider>

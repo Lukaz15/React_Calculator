@@ -13,7 +13,13 @@ html {
   background-color: var(--background);
   box-sizing: border-box;
   font-size: 62.5%;
-  margin: 0;
+  margin: auto;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
 }

@@ -2,13 +2,12 @@ form {
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 5vh;
-  width: 27.5vw;
-  height: 87.5vh;
+  width: 43rem;
+  aspect-ratio: 6/8;
   background-color: var(--body);
-  padding-bottom: 1vh;
-  border-radius: 3vw;
-  border: black solid 2px;
+  padding-bottom: 1rem;
+  border-radius: 3.5rem;
+  border: black solid 0.35rem;
   -webkit-box-shadow: 0px 0px 46px 7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 46px 7px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 46px 7px rgba(0, 0, 0, 0.75);
@@ -17,14 +16,31 @@ form {
 .button-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25vw;
+  gap: 1.25rem;
   margin: auto;
-  margin-top: auto;
+  margin-top: 2.6rem;
+  margin-bottom: 2.6rem;
   justify-content: center;
 }
 
 .field-container {
   background-color: var(--screen);
-  border-top-left-radius: 2.75vw;
-  border-top-right-radius: 2.75vw;
+  border-top-left-radius: 2.75rem;
+  border-top-right-radius: 2.75rem;
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  form {
+    width: 90vw;
+    aspect-ratio: none;
+    height: 100%;
+  }
+
+  .button-grid {
+    row-gap: 1vw;
+    column-gap: 2.5vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
