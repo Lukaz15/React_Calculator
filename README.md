@@ -1,4 +1,4 @@
-# React_Calculator
+# React Calculator
 
 A simple calculator made using React and math.js.
 
