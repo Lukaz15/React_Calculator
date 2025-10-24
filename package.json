@@ -40,9 +40,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "",
     "coder": "^0.0.0",
-    "gh-pages": "^6.1.1",
-    "nginx-conf": "^2.1.0",
-    "@babel/plugin-proposal-private-property-in-object": "@"
+    "gh-pages": "^6.3.0",
+    "nginx-conf": "^2.1.0"
   }
 }

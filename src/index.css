@@ -1,15 +1,16 @@
 /* Global rules declared here*/
 
 :root {
-  --button: #1d59f0;
+  --button: #3E8783;
   --buttonMain: rgb(255, 111, 0);
-  --buttonSecondary: #15abe4;
-  --background: #050f28;
-  --body: #0b359f;
-  --screen: #041339;
+  --buttonSecondary: #4f8f7f;
+  --background: #184B48;
+  --body: #0A2C2A;
+  --screen: #70BDB9;
+
 }
 
-html {
+html {  
   background-color: var(--background);
   box-sizing: border-box;
   font-size: 62.5%;
